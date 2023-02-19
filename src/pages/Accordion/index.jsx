@@ -1,20 +1,20 @@
 import React from "react";
+import Details from "../../components/Details";
+import { detailsArray } from "../../utils/detailsArray";
 
 function Accordion() {
   return (
     <div className="container">
       <h1> FAQ/Accordion</h1>
-      <div>
-        <details>
-          <summary>Is this a good product?</summary>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facere
-            in labore maxime, assumenda iure sed tenetur alias omnis eveniet
-            similique laborum, neque porro unde ducimus officiis animi vitae!
-            Quidem.
-          </p>
-        </details>
-      </div>
+
+      {detailsArray.map((detail) => {
+        console.log("Details", detail);
+        return (
+          <div key={detail.key}>
+            <Details title={detail.title} bodyMessage={detail.message} />
+          </div>
+        );
+      })}
     </div>
   );
 }
