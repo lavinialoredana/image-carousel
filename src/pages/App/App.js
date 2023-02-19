@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import ImageCarousel from "./ImageCarousel";
+import ImageCarousel from "../../components/ImageCarousel";
 
 function App() {
   const apiKey = "mcaRfShbgJLikAzGohw7Jfni9RvmxG8t1MmWBhiKm1RgSKuFOS2iUNv9";
