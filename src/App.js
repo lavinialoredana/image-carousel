@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import ImageCarousel from "./ImageCarousel";
 
 function App() {
   const apiKey = "mcaRfShbgJLikAzGohw7Jfni9RvmxG8t1MmWBhiKm1RgSKuFOS2iUNv9";
@@ -56,25 +57,13 @@ function App() {
   return (
     <div className="app container-fluid">
       <header className="app-header">
-        <h1> Project 1: Image Carousel </h1>
+        <h1> Image Carousel </h1>
       </header>
-      <div className="container">
-        <div className="grid">
-          <div>
-            <button onClick={handleBackwardsClick}>Backwards</button>
-          </div>
-          <div>
-            <img
-              className="image"
-              src={imageArray[imageIndex].src.medium}
-              alt="cat"
-            ></img>
-          </div>
-          <div>
-            <button onClick={handleForwardClick}>Forward</button>
-          </div>
-        </div>
-      </div>
+      <ImageCarousel
+        onHandleBackwardsClick={handleBackwardsClick}
+        currentImage={imageArray[imageIndex].src.medium}
+        onHandleForwardClick={handleForwardClick}
+      />
     </div>
   );
 }
