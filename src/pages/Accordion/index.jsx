@@ -10,7 +10,7 @@ function Accordion() {
       {detailsArray.map((detail) => {
         console.log("Details", detail);
         return (
-          <div key={detail.key}>
+          <div key={detail.id}>
             <Details title={detail.title} bodyMessage={detail.message} />
           </div>
         );
