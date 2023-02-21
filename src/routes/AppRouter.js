@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Accordion from "../pages/Accordion";
 import App from "../pages/App/App";
 import QuoteGenerator from "../pages/QuoteGenerator";
+import ShoppingList from "../pages/ShoppingList";
 
 export const routesConfig = [
   {
@@ -18,6 +19,10 @@ export const routesConfig = [
     path:"/quote-generator",
     element: <QuoteGenerator />
 
+  },
+  {
+    path:"/shopping-list",
+    element:<ShoppingList/>
   }
 ];
 
