@@ -10,17 +10,27 @@ function ShoppingList() {
     setItems((previousValue) => [...previousValue, value]);
   };
 
+  const handleRemoveItem = (itemToRemove) => {
+    const remainingItems = items.filter((item) => {
+      return item !== itemToRemove;
+    });
+    setItems(remainingItems);
+  };
+
   return (
     <div>
       <h1> Project 4: Shopping List</h1>
       <ItemToBuy onSubmit={handleSubmit} />
-      <div>
-        <ol>
-          {items.map((item) => {
-            return <li> {item}</li>;
-          })}
-        </ol>
-      </div>
+      <ol>
+        {items.map((item, index) => {
+          return (
+            <div key = {index}>
+              <li> {item} </li>
+              <button onClick={()=> handleRemoveItem(item)}> Delete</button>
+            </div>
+          );
+        })}
+      </ol>
     </div>
   );
 }
