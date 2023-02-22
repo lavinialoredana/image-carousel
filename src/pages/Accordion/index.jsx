@@ -8,7 +8,6 @@ function Accordion() {
       <h1> FAQ/Accordion</h1>
 
       {detailsArray.map((detail) => {
-        console.log("Details", detail);
         return (
           <div key={detail.id}>
             <Details title={detail.title} bodyMessage={detail.message} />
