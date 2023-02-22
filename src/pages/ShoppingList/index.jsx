@@ -16,11 +16,9 @@ function ShoppingList() {
       <ItemToBuy onSubmit={handleSubmit} />
       <div>
         <ol>
-            {items.map((item) => {
-                return(
-                    <li> {item}</li>
-                )
-            })}
+          {items.map((item) => {
+            return <li> {item}</li>;
+          })}
         </ol>
       </div>
     </div>
