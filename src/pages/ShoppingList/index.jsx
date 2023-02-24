@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ItemToBuy from "../../components/ItemToBuy";
+import ListedItem from "../../components/ListedItem";
 
 function ShoppingList() {
   const [items, setItems] = useState([]);
@@ -24,10 +25,11 @@ function ShoppingList() {
       <ol>
         {items.map((item, index) => {
           return (
-            <div key = {index}>
-              <li> {item} </li>
-              <button onClick={()=> handleRemoveItem(item)}> Delete</button>
-            </div>
+            <ListedItem
+              key={index}
+              item={item}
+              onRemoveItem={handleRemoveItem}
+            />
           );
         })}
       </ol>
