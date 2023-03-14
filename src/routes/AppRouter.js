@@ -3,6 +3,8 @@ import Accordion from "../pages/Accordion";
 import App from "../pages/App/App";
 import QuoteGenerator from "../pages/QuoteGenerator";
 import ShoppingList from "../pages/ShoppingList";
+import HooksExercises from "../pages/HooksExercises";
+
 
 export const routesConfig = [
   {
@@ -23,6 +25,9 @@ export const routesConfig = [
   {
     path:"/shopping-list",
     element:<ShoppingList/>
+  },
+  {path:"/hooks",
+  element:<HooksExercises/>
   }
 ];
 
