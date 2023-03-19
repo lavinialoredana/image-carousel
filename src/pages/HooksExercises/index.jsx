@@ -28,6 +28,7 @@ const HooksExercises = () => {
         );
     };
 
+    // useEffect hook practice example
     const [winner, setWinner] = useState("John");
     const [admin, setAdmin] = useState("false");
 
